@@ -1,0 +1,117 @@
+.main-navbar {
+  width: 98%;
+  max-width: 1780px;
+  margin: 1% auto;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  box-sizing: border-box;
+  overflow: hidden;
+  /* ✅ This adds space inside the rounded box */
+  padding: 30px;
+}
+
+
+.nav-logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-links {
+  padding: 20px;
+  border-radius: 40px;
+  list-style: none;
+  display: flex;
+  gap: 60px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  padding: 6px 14px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: white;
+  color: black;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Mobile dropdown */
+.dropdown-menu {
+  display: none;
+  flex-direction: column;
+  background-color: black;
+  border-radius: 0 0 20px 20px;
+  padding: 20px;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  left: 0;
+  box-shadow: 0 20px 40px rgba(255, 255, 255, 0.1);
+  animation: slideDown 0.4s ease forwards;
+  z-index: 10;
+}
+
+.dropdown-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.dropdown-menu a i {
+  margin-right: 10px;
+}
+
+.dropdown-menu a:hover {
+  background-color: white;
+  color: black;
+  border-radius: 8px;
+}
+
+.dropdown-menu.active {
+  display: flex;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+.nav-logo, .nav-links li {
+  opacity: 1;
+  transform: translateY(0);
+}

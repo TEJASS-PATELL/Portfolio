@@ -1,0 +1,106 @@
+/* 1. Font-face: Use proper @font-face rule */
+@font-face {
+  font-family: 'Lolo';
+  src: url('./assets/file.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 2. Global Reset & Base Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Lolo', sans-serif;
+  background-color: #fff; /* Or your theme background */
+  color: #111;            /* Base text color */
+  overflow-x: hidden;
+}
+
+/* 3. Remove default focus outlines (optional, or customize) */
+:focus {
+  outline: none;
+}
+
+/* 4. Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 5. Images and media */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 6. Basic Typography defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  line-height: 1.4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* 7. Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 8. Form elements */
+input, button, textarea, select {
+  font: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+/* 9. Cursor pointer for buttons */
+button {
+  cursor: pointer;
+}
+
+/* 10. Root container for full layout apps */
+#root, .app {
+  width: 100%;
+  height: 600%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff; /* black track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffffff;  /* white thumb */
+  border-radius: 8px;
+  border: 2px solid #ffffff; /* gives it a border ring effect */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ccc; /* on hover effect */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #000000 #ffffff; /* thumb track */
+}

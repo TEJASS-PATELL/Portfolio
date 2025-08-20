@@ -1,0 +1,140 @@
+.timeline-container {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 60px 20px;
+}
+
+.timeline-heading {
+  text-align: center;
+  font-size: 4.5rem;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #fff;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-subheading {
+  text-align: center;
+  font-size: 2rem;
+  color: #000000;
+  margin-bottom: 80px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.timeline {
+  position: relative;
+  max-width: 1400px;
+  margin: auto;
+  padding: 80px 0;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #000000;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+}
+
+.timeline-item {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -13px;
+  background-color: #fff;
+  border: 4px solid #000;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item.left {
+  left: 0;
+}
+
+.timeline-item.right {
+  left: 50%;
+}
+
+.timeline-item.right::after {
+  left: -20px;
+}
+
+.timeline-content {
+  background: linear-gradient(to right, #000 40%, #333);
+  padding: 20px;
+  border-radius: 12px;
+  color: white;
+  border: 1px solid #fff;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.timeline-img {
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #fff;
+  filter: grayscale(100%);
+}
+
+.timeline-date {
+  font-style: italic;
+  color: #aaa;
+  margin: 5px 0 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .timeline::after {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 25px;
+  }
+
+  .timeline-item.right {
+    left: 0%;
+  }
+
+  .timeline-item::after {
+    left: 15px;
+  }
+}
+
+.timeline-content a {
+  display: inline-block;
+  margin-top: 8px;
+  color: #aaa;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.timeline-content a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}

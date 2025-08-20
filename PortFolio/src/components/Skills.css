@@ -1,0 +1,126 @@
+.skill-page {
+  height: 100vh;
+  width: 100vw;
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.skill-container {
+  position: relative;
+  width: 90vw;
+  height: 100vh;
+  border-radius: 40px;
+  background: transparent;
+    animation: appear linear;
+  animation-range: entry 0% cover 40%;
+  animation-timeline: view();
+  z-index: 2;
+}
+
+.skill-details {
+  font-size: 1.8rem;
+  margin-top: 20px;
+  max-width: 700px;
+  color: #000000;
+  line-height: 1.6;
+  margin-bottom: 60px;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 900px;
+  width: 100%;
+}
+
+
+.float-icon {
+  position: absolute;
+  display: inline-block;
+  cursor: pointer;
+  
+}
+
+/* Icon positions and animation delays */
+.icon1  { top: 5%;  left: 0%;   animation-delay: 0s; }
+.icon2  { top: 5%; left: 20%;  animation-delay: 0.4s; }
+.icon3  { top: 5%; left: 40%;  animation-delay: 0.8s; }
+.icon4  { top: 5%; left: 60%;  animation-delay: 1.2s; }
+.icon5  { top: 5%; left: 80%;  animation-delay: 1.6s; }
+.icon6  { top: 35%; left: 10%;  animation-delay: 2s; }
+.icon7  { top: 35%; left: 30%;  animation-delay: 2.4s; }
+.icon8  { top: 35%; left: 50%;  animation-delay: 2.8s; }
+.icon9  { top: 35%; left: 70%;  animation-delay: 3.2s; }
+.icon10 { top: 35%; left: 90%;  animation-delay: 3.6s; }
+.icon11 { top: 65%; left: 0%;  animation-delay: 4s; }
+.icon12 { top: 65%; left: 20%;  animation-delay: 4.4s; }
+.icon13 { top: 65%; left: 40%;  animation-delay: 4.8s; }
+.icon14 { top: 65%; left: 60%;  animation-delay: 5.2s; }
+.icon18 { top: 65%; left: 80%;  animation-delay: 6s; }
+.icon19 { top: 95%; left: 30%;  animation-delay: 6.4s; }
+.icon20 { top: 95%; left: 50%;  animation-delay: 6.8s; }
+.icon21 { top: 95%; left: 70%;  animation-delay: 7.2s; }
+.icon22 { top: 95%; left: 90%;  animation-delay: 7.6s; }
+
+.tooltip {
+  visibility: hidden;
+  width: max-content;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 6px 10px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 10;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.float-icon:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.skill-title{
+    font-size: 100px;
+    color: black;
+}
+
+@keyframes appear {
+  form{
+    opacity: 0;
+    scale: 0.5;
+  }
+  to{
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes floatRandom {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(30px, -35px) rotate(5deg);
+  }
+  100% {
+    transform: translate(-15px, 10px) rotate(-5deg);
+  }
+}
