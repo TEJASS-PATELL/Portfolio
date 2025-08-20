@@ -82,7 +82,7 @@ export default function Contact() {
                         <span className="text-slide">Submit</span>
                         <span className="text-slide duplicate">Submit</span>
                     </button>
-                    {status && <p style={{ marginTop: "10px", color: "green" }}>{status}</p>}
+                    {status && <p style={{ marginTop: "10px", color: "white" }}>{status}</p>}
                     <div className="social-links">
                         <a
                             href="https://github.com/TEJASS-PATELL"
@@ -102,10 +102,7 @@ export default function Contact() {
                             <FaLinkedin size={40} />
                         </a>
 
-                        <a
-                            href="mailto:tejasspatell2@gmail.com"
-                            aria-label="Email"
-                        >
+                        <a href="mailto:tejasspatell2@gmail.com" aria-label="Email">
                             <FaEnvelope size={40} />
                         </a>
                     </div>

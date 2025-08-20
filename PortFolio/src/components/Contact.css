@@ -37,7 +37,7 @@
 .contact-container p {
   color: black;
   margin-bottom: 20px;
-    line-height:   1.6;          /* Controls space between lines */
+    line-height:   1.6;       
   letter-spacing: 1px; 
   font-size: 24px;
 }
@@ -47,9 +47,9 @@
   color: #ffffff;
   border-radius: 20px;
   font-size: 25px;
-  padding: 5px 15px;   /* Adds space inside the span (top-bottom, left-right) */
-  margin: 0 5px;       /* Optional: Adds small gap outside the span */
-  display: inline-block; /* Ensures padding/margin behaves properly */
+  padding: 5px 15px;   
+  margin: 0 5px;      
+  display: inline-block; 
 }
 
 
@@ -114,7 +114,6 @@
   transform: translateY(-100%);
 }
 
-
 .social-links {
   display: flex;
   justify-content: center;
@@ -167,7 +166,6 @@
   margin-right: 8px;
 }
 
-/* Scroll animation */
 @keyframes scrollBanner {
   0% {
     transform: translateX(0%);
