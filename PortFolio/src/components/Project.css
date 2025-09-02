@@ -68,11 +68,8 @@
   letter-spacing: 1px;
   font-size: 25px;
   padding: 5px 15px;
-  /* Adds space inside the span (top-bottom, left-right) */
   margin: 20px;
-  /* Optional: Adds small gap outside the span */
   display: inline-block;
-  /* Ensures padding/margin behaves properly */
 }
 
 .project-meta ul {

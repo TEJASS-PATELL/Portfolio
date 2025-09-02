@@ -1,41 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import './Hero.css';
-import gsap from 'gsap';
 import Navbar from './Navbar';
 
 export default function Hero() {
   const containerRef = useRef(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline();
-      tl.from(".top-line", {
-        opacity: 0,
-        y: 40,
-        scale: 0.95,
-        delay: .8,
-        duration: 1.4,
-        ease: "power3.out",
-      })
-        .from(".main-title", {
-          opacity: 0,
-          y: 60,
-          scale: 1.1,
-          duration: 1.4,
-          ease: "power4.out",
-        }, "-=0.6") // overlaps with top-line
-
-        .from(".bottom-line", {
-          opacity: 0,
-          y: 40,
-          scale: 0.95,
-          duration: 1.5,
-          ease: "power3.out",
-        }, "-=0.8");
-    }, containerRef);
-
-    return () => ctx.revert();
-  }, []);
 
   return (
     <div className="main-container">

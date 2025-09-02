@@ -80,11 +80,11 @@
 }
 
 .down-arrow {
-  position: absolute;  /* fix it to viewport so it stays on scroll */
-  right: 50px;      /* 20px from right */
-  bottom: 50px;     /* 40px from bottom */
-  background: #ffffff; /* dark background */
-  border-radius: 50%; /* circular shape */
+  position: absolute;
+  right: 50px;    
+  bottom: 50px;     
+  background: #ffffff; 
+  border-radius: 50%; 
   width: 70px;
   height: 70px;
   display: flex;
@@ -98,7 +98,7 @@
 }
 
 .down-arrow:hover {
-  background: #cfcfcf; /* accent hover color */
+  background: #cfcfcf;
   transform: translateY(5px);
 }
 

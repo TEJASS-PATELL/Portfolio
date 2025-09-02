@@ -3,16 +3,15 @@
   max-width: 1780px;
   margin: 1% auto;
   background: transparent;
+  font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 70px;
   box-sizing: border-box;
   overflow: hidden;
-  /* ✅ This adds space inside the rounded box */
   padding: 30px;
 }
-
 
 .nav-logo {
   font-size: 30px;

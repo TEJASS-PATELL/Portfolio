@@ -3,8 +3,6 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import './Project.css'; // We'll write CSS below
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
-
-
 gsap.registerPlugin(ScrollTrigger);
 
 const Project = () => {
@@ -40,7 +38,7 @@ const Project = () => {
           <div className="project-meta">
             <h4>Technologies Used</h4>
             <ul>
-              <li><strong>Frontend :</strong> React.js with custom CSS (no Tailwind)</li>
+              <li><strong>Frontend :</strong> React.js with custom CSS</li>
               <li><strong>Backend :</strong> Node.js, Express.js</li>
               <li><strong>Database :</strong> MySQL with Prisma ORM</li>
               <li><strong>Authentication :</strong> JWT (JSON Web Tokens), Bcrypt for secure login</li>
@@ -80,29 +78,28 @@ const Project = () => {
         <div className="project-details">
           <h2 className="project-title">InstaConnect</h2>
           <p className="project-desc">
-            A clean, real-time chat app built for fast, secure, and focused communication — without the clutter of ads or statuses. InstaConnect offers smooth messaging, private groups, and video calls for users who just want to talk.
+            A clean, real-time chat app built for fast, secure, and focused communication — without the clutter of ads or statuses. InstaConnect offers smooth messaging for users who just want to talk.
           </p>
           <div className="project-meta">
             <h4>Technologies Used</h4>
             <ul>
               <li><strong>Frontend :</strong> React.js with custom CSS</li>
               <li><strong>Real-time Communication :</strong> Socket.io for bi-directional messaging and presence</li>
-              <li><strong>Video Calling :</strong> WebRTC integrated with Socket.io signaling</li>
               <li><strong>Backend :</strong> Node.js with Express.js</li>
               <li><strong>Database :</strong> MySQL</li>
               <li><strong>Authentication :</strong> JWT, Bcrypt for encrypted passwords</li>
-              <li><strong>Security :</strong> Chat Lock with PIN or biometric simulation (localStorage-based)</li>
+              <li><strong>Security :</strong> Chat Lock with PIN </li>
               <li><strong>Features :</strong>
-                One-to-one chat, group messaging, online/offline status, typing indicator, chat history,
-                message timestamps, media sharing, chat lock, and private video calls
+                One-to-one chat, online/offline status, typing indicator, chat history,
+                message timestamps, media sharing, chat lock, 
               </li>
               <li><strong>Notifications :</strong> Real-time custom toast alerts</li>
-              <li><strong>Deployment :</strong> Vercel (Frontend), Render/Railway (Backend), MongoDB Atlas</li>
+              <li><strong>Deployment :</strong> Vercel (Frontend), Render/Railway (Backend), Railway (MySQL)</li>
             </ul>
 
             <h4>Problem Solved</h4>
             <p>
-              While most chat apps are overloaded with stories, ads, and distractions, InstaConnect keeps it simple — offering fast messaging, secure group chats, video calls, and chat lock. Built for people who just want to talk.
+              While most chat apps are overloaded with stories, ads, and distractions, InstaConnect keeps it simple — offering fast messaging and chat lock for privacy. Built for people who just want to talk.
             </p>
             <ul className="project-links">
               <li>
@@ -138,20 +135,19 @@ const Project = () => {
           <div className="project-meta">
             <h4>Technologies Used</h4>
             <ul>
-              <li><strong>Frontend :</strong> React.js with Tailwind CSS</li>
-              <li><strong>AI & Brain Training :</strong> TensorFlow.js, custom ML models</li>
-              <li><strong>Health Tracking :</strong> Wearable integration (Google Fit API / Apple HealthKit)</li>
-              <li><strong>Backend :</strong> Node.js with Express.js</li>
-              <li><strong>Database :</strong> MongoDB Atlas</li>
-              <li><strong>Authentication :</strong> JWT + Google OAuth</li>
+              <li><strong>Frontend :</strong> React 18 + TypeScript, Tailwind CSS for styling</li>
+              <li><strong>AI Brain :</strong> Gemini API (intelligent health & wellness guidance)</li>
+              <li><strong>Health & Fitness Tracking :</strong> BMI calculator, yoga/meditation sessions, habit challenges</li>
+              <li><strong>Backend :</strong> Node.js + Express (REST API)</li>
+              <li><strong>Database :</strong> MySQL</li>
+              <li><strong>Authentication :</strong> JWT in Cookies + Passport.js with Google Login</li>
               <li><strong>Features :</strong>
-                Daily health summary, guided meditation, memory games, stress checker,
-                sleep tracker, mental score dashboard, habit reminders
+                Hands-free coaching (voice input), guided yoga & meditation, daily habit challenges,
+                session history & delete, stopwatch for practice, multilingual support
               </li>
-              <li><strong>Notifications :</strong> Smart reminders & health alerts</li>
-              <li><strong>Deployment :</strong> Vercel (Frontend), Render (Backend)</li>
+          <li><strong>Security :</strong> Helmet.js, bcrypt, Joi/express-validator, Rate Limiting</li>
+              <li><strong>Deployment :</strong> Frontend → Vercel | Backend → Render / Railway | Database → MySQL</li>
             </ul>
-
             <h4>Problem Solved</h4>
             <p>
               People often track fitness and mental wellness separately. Body+Brain AI unifies both —
@@ -162,7 +158,7 @@ const Project = () => {
           <ul className="project-links">
             <li>
               <a
-                href="https://github.com/yourusername/BodyBrain-AI"
+                href="https://github.com/TEJASS-PATELL/Brain-Body-ai.git"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="link-button"
@@ -173,7 +169,7 @@ const Project = () => {
             </li>
             <li>
               <a
-                href="https://bodybrain.vercel.app"
+                href="https://brain-body-ai.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="link-button"
