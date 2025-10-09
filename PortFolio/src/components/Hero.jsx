@@ -1,28 +1,31 @@
 import { useRef } from 'react';
 import './Hero.css';
+import userImg from "../assets/user.png";
 import Navbar from './Navbar';
 
 export default function Hero() {
-  const containerRef = useRef(null);
 
   return (
     <div className="main-container">
       <div className="main-page">
         <Navbar />
-        <div ref={containerRef} className="architect-hero">
-          <div className="hero-content">
-            <h4 className="top-line">VERSATILE FULL STACK DEVELOPER & CREATIVE PROBLEM SOLVER</h4>
-            <h1 className="main-title">TEJAS-PATEL</h1>
-            <h4 className="bottom-line">BUILDING FUTURE-READY DIGITAL EXPERIENCES THAT SCALE</h4>
+        <div className="architect-hero">
+          <div className="left-div">
+            <h1 className="main-title">Tejas Patel</h1>
+            <p className="subtitle">
+              Passionate Full-Stack Developer — turning ideas into scalable web experiences.
+            </p>
+            <div className="button-group">
+              <a href="/resume.pdf" className="btn primary-btn" target="_blank" rel="noopener noreferrer">
+                Resume
+              </a>
+              <a href="#contact" className="btn secondary-btn">
+                Contact Me
+              </a>
+            </div>
           </div>
+          <img src={userImg}></img>
         </div>
-      </div>
-      <div className="down-arrow">
-        <svg width="200" height="200" viewBox="0 0 200 200">
-          <circle cx="100" cy="100" r="90" stroke="black" strokeWidth="4" fill="none" />
-          <circle cx="100" cy="100" r="70" stroke="black" strokeWidth="2" fill="none" strokeDasharray="10 5" />
-          <circle cx="100" cy="100" r="50" fill="black" />
-        </svg>
       </div>
     </div>
   );

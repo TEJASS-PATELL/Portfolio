@@ -17,8 +17,7 @@
 .skill-container {
   position: relative;
   width: 90vw;
-  height: 100vh;
-  border-radius: 40px;
+  height: 50vh;
   background: transparent;
   animation: appear linear;
   animation-range: entry 0% cover 40%;
@@ -28,27 +27,17 @@
 
 .skill-details {
   font-size: 1.8rem;
-  margin-top: 20px;
+  margin-top: 5px;
   max-width: 1200px;
   color: #000000;
   line-height: 1.6;
-  margin-bottom: 60px;
-}
-
-.skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  max-width: 900px;
-  width: 100%;
+  margin-bottom: 50px;
 }
 
 .float-icon {
   position: absolute;
   display: inline-block;
-  cursor: pointer;
-  
+  cursor: pointer; 
 }
 
 .icon1  { top: 5%;  left: 0%;   animation-delay: 0s; }
@@ -99,6 +88,9 @@
 .skill-title{
     font-size: 100px;
     color: black;
+    letter-spacing: 10px;
+    font-weight: bold;
+    font-family: 'Irish Grover', cursive;
 }
 
 @keyframes appear {

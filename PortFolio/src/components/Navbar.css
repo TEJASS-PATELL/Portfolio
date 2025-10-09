@@ -16,7 +16,7 @@
 .nav-logo {
   font-size: 30px;
   font-weight: bold;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .nav-links {
@@ -28,7 +28,7 @@
 }
 
 .nav-links li a {
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   font-size: 22px;
   padding: 6px 14px;

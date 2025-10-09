@@ -35,7 +35,6 @@ export default function Skills() {
             <p className="skill-details">
                 A journey through my technical stack — blending creativity with performance.
             </p>
-
             <div className='skill-container' ref={iconRef}>
                 <div className="technology-icon">
                     <div className="float-icon icon1"><FaReact size={80} /><span className="tooltip">React</span></div>

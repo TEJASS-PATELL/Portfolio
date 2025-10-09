@@ -36,6 +36,7 @@
 
 .about-content h1 {
     align-self: self-start;
+      font-family: 'Irish Grover', cursive;
     font-size: 150px;
     margin-bottom: 20px;
 }
