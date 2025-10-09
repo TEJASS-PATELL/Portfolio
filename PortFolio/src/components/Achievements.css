@@ -6,14 +6,12 @@
 
 .timeline-heading {
   text-align: center;
-  font-size: 4.5rem;
+  font-size: 8rem;
   margin-top: 100px;
+  font-weight: bold;
+  letter-spacing: 10px;
   margin-bottom: 10px;
-  border-bottom: 2px solid #fff;
-  display: inline-block;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  font-family: "Irish Grover", system-ui;
 }
 
 .timeline-subheading {

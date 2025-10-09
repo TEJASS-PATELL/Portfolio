@@ -18,27 +18,28 @@
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
-.contact-form{
-    background: linear-gradient(to right, #000 40%, #333);
-    margin-top: 60px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.323);
-    padding: 40px 40px;
-      border: 1px solid #adadad;
-    border-radius: 40px;
+.contact-form {
+  background: linear-gradient(to right, #000 40%, #333);
+  margin-top: 60px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.323);
+  padding: 40px 40px;
+  border: 1px solid #adadad;
+  border-radius: 40px;
 }
 
 .contact-container h2 {
   color: black;
   margin-bottom: 25px;
+  font-family: 'Irish Grover', cursive;
   align-self: self-start;
-  font-size: 80px;
+  font-size: 120px;
 }
 
 .contact-container p {
   color: black;
   margin-bottom: 20px;
-    line-height:   1.6;       
-  letter-spacing: 1px; 
+  line-height: 1.6;
+  letter-spacing: 1px;
   font-size: 24px;
 }
 
@@ -47,9 +48,9 @@
   color: #ffffff;
   border-radius: 20px;
   font-size: 25px;
-  padding: 5px 15px;   
-  margin: 0 5px;      
-  display: inline-block; 
+  padding: 5px 15px;
+  margin: 0 5px;
+  display: inline-block;
 }
 
 
@@ -60,7 +61,7 @@
   margin-bottom: 20px;
   background: #ffffff;
   color: #000000;
-    border: 2px solid rgb(232, 232, 232);
+  border: 2px solid rgb(232, 232, 232);
   border-radius: 6px;
   font-size: 18px;
 }
@@ -87,7 +88,7 @@
 .submit-btn .text-slide {
   display: block;
   position: absolute;
-    font-family: 'Irish Grover', cursive;
+  font-family: 'Irish Grover', cursive;
   left: 0;
   width: 100%;
   height: 100%;
@@ -136,8 +137,8 @@
   transform: scale(1.1);
 }
 
-.fas{
-    color: white;
+.fas {
+  color: white;
 }
 
 .hire-me-banner {
@@ -171,6 +172,7 @@
   0% {
     transform: translateX(0%);
   }
+
   100% {
     transform: translateX(-50%);
   }

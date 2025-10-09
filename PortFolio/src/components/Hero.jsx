@@ -19,12 +19,8 @@ export default function Hero() {
               <a href="/resume.pdf" className="btn primary-btn" target="_blank" rel="noopener noreferrer">
                 Resume
               </a>
-              <a href="#contact" className="btn secondary-btn">
-                Contact Me
-              </a>
             </div>
           </div>
-          <img src={userImg}></img>
         </div>
       </div>
     </div>

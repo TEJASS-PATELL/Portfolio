@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import './Skills.css';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import { SiCplusplus, SiGo, SiTypescript, SiMysql, SiNestjs, SiPrisma, SiKubernetes, SiC, SiGraphql, SiExpress, SiFirebase, SiPostman, SiOpenai } from "react-icons/si";
+import { SiCplusplus, SiTypescript, SiMysql, SiPrisma, SiC, SiGraphql, SiExpress, SiFirebase, SiPostman, SiOpenai, SiApachekafka } from "react-icons/si";
 import { FaReact, FaHtml5, FaCss3Alt, FaJsSquare, FaNodeJs, FaGithub, FaPython, FaDocker, FaServer } from "react-icons/fa";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -56,6 +56,7 @@ export default function Skills() {
                     <div className="float-icon icon20"><SiPostman size={80} /><span className="tooltip">Postman</span></div>
                     <div className="float-icon icon21"><SiC size={80} /><span className="tooltip">C</span></div>
                     <div className="float-icon icon22"><SiGraphql size={80} /><span className="tooltip">GraphQL</span></div>
+                    <div className="float-icon icon15"> <SiApachekafka size={80} /> <span className="tooltip">Apache Kafka</span></div>
                 </div>
 
             </div>

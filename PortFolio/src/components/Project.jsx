@@ -7,8 +7,9 @@ const Project = () => {
         Projects That Make Impact
       </h1>
       <p className="project-subtext">
-        Explore a collection of my work — real-world solutions crafted with passion, purpose, and the latest tech.
+        Discover my projects—crafted with purpose and powered by the latest tech.
       </p>
+
       <div className="projects-container">
         <a href="https://full-stack-chat-application-seven.vercel.app" target="_blank" rel="noopener noreferrer" className="project-box">
           <img src="/project1.png" alt="FutureForge" />
