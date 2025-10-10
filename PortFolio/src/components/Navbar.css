@@ -13,8 +13,10 @@
 
 .nav-logo {
   font-size: 30px;
+  letter-spacing: 2px;
   font-weight: bold;
   color: rgb(0, 0, 0);
+    font-family: "Irish Grover", system-ui;
 }
 
 .nav-links {

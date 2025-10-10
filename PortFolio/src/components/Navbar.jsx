@@ -7,7 +7,7 @@ const Navbar = () => {
 
   return (
       <nav className="main-navbar">
-        <div className="nav-logo" ref={logoReff}>Aspire: Software Engineer / Developer</div>
+        <div className="nav-logo" ref={logoReff}>Aspire: Software Developer</div>
         <ul className="nav-links" ref={linksRef}>
           <li><a href="#"><i className="fas fa-house"></i> Home</a></li>
           <li><a href="#"><i className="fas fa-user"></i> About</a></li>

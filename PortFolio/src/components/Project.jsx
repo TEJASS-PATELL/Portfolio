@@ -12,7 +12,7 @@ const Project = () => {
 
       <div className="projects-container">
         <a href="https://full-stack-chat-application-seven.vercel.app" target="_blank" rel="noopener noreferrer" className="project-box">
-          <img src="/project1.png" alt="FutureForge" />
+          <img src="/project3.png" alt="Body+Brain AI" />
           <div className="overlay">
             <h3>FutureForge</h3>
             <p>Explore exams & jobs</p>
@@ -27,8 +27,8 @@ const Project = () => {
           </div>
         </a>
 
-        <a href="https://brain-body-ai.vercel.app" target="_blank" rel="noopener noreferrer" className="project-box">
-          <img src="/project3.png" alt="Body+Brain AI" />
+        <a href="https://full-stack-chat-application-seven.vercel.app" target="_blank" rel="noopener noreferrer" className="project-box">
+           <img src="/project1.png" alt="ChatLock" />
           <div className="overlay">
             <h3>Body+Brain AI</h3>
             <p>AI Wellness Assistant</p>

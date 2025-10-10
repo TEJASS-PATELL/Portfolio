@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import './Hero.css';
+import { FaDownload } from "react-icons/fa";
 import userImg from "../assets/user.png";
 import Navbar from './Navbar';
 
@@ -17,8 +18,7 @@ export default function Hero() {
             </p>
             <div className="button-group">
               <a href="/resume.pdf" className="btn primary-btn" target="_blank" rel="noopener noreferrer">
-                Resume
-              </a>
+              <FaDownload style={{ marginRight: "8px" }} />Resume</a>
             </div>
           </div>
         </div>
