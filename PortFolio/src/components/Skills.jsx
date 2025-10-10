@@ -55,8 +55,8 @@ export default function Skills() {
                     <div className="float-icon icon19"><FaPython size={80} /><span className="tooltip">Python</span></div>
                     <div className="float-icon icon20"><SiPostman size={80} /><span className="tooltip">Postman</span></div>
                     <div className="float-icon icon21"><SiC size={80} /><span className="tooltip">C</span></div>
-                    <div className="float-icon icon22"><SiGraphql size={80} /><span className="tooltip">GraphQL</span></div>
-                    <div className="float-icon icon15"> <SiApachekafka size={80} /> <span className="tooltip">Apache Kafka</span></div>
+                    <div className="float-icon icon15"><SiGraphql size={80} /><span className="tooltip">GraphQL</span></div>
+                    <div className="float-icon icon22"> <SiApachekafka size={80} /> <span className="tooltip">Apache Kafka</span></div>
                 </div>
 
             </div>
