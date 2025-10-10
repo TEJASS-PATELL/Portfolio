@@ -21,14 +21,16 @@
 
 .nav-links {
   padding: 20px;
-  border-radius: 40px;
+  border-radius: 15px;
   list-style: none;
   display: flex;
+  color: white;
   gap: 55px;
+  background-color: black;
 }
 
 .nav-links li a {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-decoration: none;
   font-size: 22px;
   padding: 10px 14px;

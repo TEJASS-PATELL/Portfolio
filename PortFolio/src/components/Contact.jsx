@@ -45,7 +45,6 @@ export default function Contact() {
         <div id='contact' className="contact-section">
             <div className="contact-container">
                 <h2>Contact Me</h2>
-
                 <p>
                     I’m passionate about solving <span>Real-world problems</span> through clean, efficient, and user-centric design.
                     With a strong focus on delivering practical solutions. If you're interested in working together, collaborating, or

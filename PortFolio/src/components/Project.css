@@ -104,19 +104,9 @@
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 40px;
+  margin-bottom: 0px;
   line-height: 1.6;
 
-}
-
-.project-showcase {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  height: auto;
-  padding: 0;
-  width: 100vw;
-  background: #ffffff;
 }
 
 .project-details {
@@ -130,17 +120,5 @@
   padding: 60px;
 }
 
-.project-title {
-  font-size: 80px;
-  letter-spacing: 1px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
 
-.project-desc {
-  font-size: 21px;
-  letter-spacing: 1px;
-  color: #000000;
-  margin-bottom: 30px;
-    line-height: 1.6;
-}
+

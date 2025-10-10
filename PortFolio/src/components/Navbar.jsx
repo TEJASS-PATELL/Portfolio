@@ -2,13 +2,10 @@ import { useRef } from 'react';
 import './Navbar.css';
 
 const Navbar = () => {
-  const logoReff = useRef(null);
-  const linksRef = useRef(null);
-
   return (
       <nav className="main-navbar">
-        <div className="nav-logo" ref={logoReff}>Aspire: Software Developer</div>
-        <ul className="nav-links" ref={linksRef}>
+        <div className="nav-logo">Aspire: Software Developer</div>
+        <ul className="nav-links">
           <li><a href="#"><i className="fas fa-house"></i> Home</a></li>
           <li><a href="#"><i className="fas fa-user"></i> About</a></li>
           <li><a href="#"><i className="fas fa-code"></i> Skills</a></li>
