@@ -9,9 +9,9 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.post("/send", async (req, res) => {
-  console.log("Request body:", req.body);
-  const { name, email, message } = req.body;
-  console.log("Fields:", name, email, message);
+    console.log("Request body:", req.body);
+    const { name, email, message } = req.body;
+    console.log("Fields:", name, email, message);
 
     const transporter = nodemailer.createTransport({
         service: "gmail",
@@ -22,10 +22,20 @@ app.post("/send", async (req, res) => {
     });
 
     const mailOptions = {
-        from: email,
+        from: `"${name}" <${email}>`,
         to: process.env.EMAIL_USER,
         subject: `New message from ${name}`,
-        text: `Name: ${name}\nEmail: ${email}\nMessage:\n${message}`,
+        html: `
+        <div style="font-family: Arial, sans-serif; line-height: 1.5; color: orange;">
+          <h2 style="color: orange;">New Contact Form Submission</h2>
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Message:</strong></p>
+          <p style="background: #f4f4f4; padding: 10px; border-radius: 5px;">${message}</p>
+          <hr>
+          <p style="font-size: 1em; color: #555;">Sent from your website contact form.</p>
+        </div>
+      `,
     };
 
     try {

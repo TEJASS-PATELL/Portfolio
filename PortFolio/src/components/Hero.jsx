@@ -1,7 +1,6 @@
 import { useRef } from 'react';
 import './Hero.css';
 import { FaDownload } from "react-icons/fa";
-import userImg from "../assets/user.png";
 import Navbar from './Navbar';
 
 export default function Hero() {
