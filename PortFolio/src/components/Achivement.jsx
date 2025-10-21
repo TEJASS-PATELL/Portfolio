@@ -18,7 +18,7 @@ const achievements = [
         title: 'Top Performer - Intern at XYZ Corp',
         date: 'July 2023',
         description: 'Recognized as top intern for delivering AI-enhanced chatbot module.',
-        link: 'https://example.com/intern-xyz-corp'
+        link: 'https://www.geeksforgeeks.org/user/tejasspatell/'
     },
     {
         title: 'LeetCode 300+ Problems Solved',

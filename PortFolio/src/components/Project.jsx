@@ -11,8 +11,6 @@ const Project = () => {
         Discover my projects—crafted with purpose and powered by the latest tech.
       </p>
       <div className="project-showcase">
-
-        {/* 🚀 Project 1: FutureForge */}
         <div className="project-details">
           <h2 className="project-title">FutureForge</h2>
           <p className="project-desc">
@@ -50,7 +48,6 @@ const Project = () => {
           </ul>
         </div>
 
-        {/* 💬 Project 2: ChatLock */}
         <div className="project-details">
           <h2 className="project-title">ChatLock</h2>
           <p className="project-desc">
@@ -90,7 +87,6 @@ const Project = () => {
           </ul>
         </div>
 
-        {/* 🧠 Project 3: Body+Brain AI */}
         <div className="project-details">
           <h2 className="project-title">Body+Brain AI</h2>
           <p className="project-desc">
@@ -130,7 +126,6 @@ const Project = () => {
             </li>
           </ul>
         </div>
-
       </div>
     </div>
   );
