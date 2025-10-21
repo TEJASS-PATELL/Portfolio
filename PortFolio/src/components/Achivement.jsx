@@ -1,5 +1,6 @@
 import React from 'react';
 import './Achievements.css';
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const achievements = [
     {
@@ -43,7 +44,9 @@ const Achievements = () => {
                             <h2>{item.title}</h2>
                             <p className="timeline-date">{item.date}</p>
                             <p>{item.description}</p>
-                            <a href={item.link} target="_blank" rel="noopener noreferrer">View More</a>
+                            <a href={item.link} target="_blank" rel="noopener noreferrer">
+                                Visit <FaExternalLinkAlt size={12} style={{ marginLeft: "5px" }} />
+                            </a>
                         </div>
                     </div>
                 ))}

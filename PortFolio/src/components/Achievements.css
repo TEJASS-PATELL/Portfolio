@@ -123,7 +123,8 @@
 }
 
 .timeline-content a {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   margin-top: 8px;
   color: #aaa;
   font-weight: 500;
