@@ -15,7 +15,7 @@ const About = () => {
                 </p>
 
                 <h4 className="name-hover">
-                    <span className="text-slide">~ Tejas Patel</span>
+                    <span className="textt-slide">~ Tejas Patel</span>
                 </h4>
             </div>
         </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Contact.css';
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import toast from 'react-hot-toast';
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -9,15 +9,12 @@ export default function Contact() {
         message: ''
     });
 
-    const [status, setStatus] = useState('');
-
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setStatus('Sending');
 
         try {
             const response = await fetch("http://localhost:5002/send", {
@@ -30,14 +27,14 @@ export default function Contact() {
 
             const result = await response.json();
             if (result.success) {
-                setStatus("Message sent successfully!");
+                toast.success("Message Sent Successfully");
                 setFormData({ name: '', email: '', message: '' });
             } else {
-                setStatus("Failed to send message.");
+                toast.error("Failed to send message.");
             }
         } catch (error) {
             console.error("Error:", error);
-            setStatus("Something went wrong.");
+            toast.error(err);
         }
     };
 
@@ -79,32 +76,7 @@ export default function Contact() {
 
                     <button className="submit-btn" type="submit">
                         <span className="text-slide">Submit</span>
-                        <span className="text-slide duplicate">Submit</span>
                     </button>
-                    {status && <p style={{ marginTop: "10px", color: "white" }}>{status}</p>}
-                    <div className="social-links">
-                        <a
-                            href="https://github.com/TEJASS-PATELL"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="GitHub"
-                        >
-                            <FaGithub size={40} />
-                        </a>
-
-                        <a
-                            href="https://www.linkedin.com/in/tejasspatell"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="LinkedIn"
-                        >
-                            <FaLinkedin size={40} />
-                        </a>
-
-                        <a href="mailto:tejasspatell2@gmail.com" aria-label="Email">
-                            <FaEnvelope size={40} />
-                        </a>
-                    </div>
                 </form>
             </div>
         </div>
