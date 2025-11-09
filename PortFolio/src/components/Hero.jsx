@@ -1,8 +1,6 @@
 import { useRef } from 'react';
 import './Hero.css';
-import { BsArrowRight } from "react-icons/bs";
-import { HiArrowLongRight } from "react-icons/hi2";
-import { FaArrowRight, FaDownload, FaEnvelope, FaGithub, FaLinkedin, FaLongArrowAltRight } from "react-icons/fa";
+import { FaDownload, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import Navbar from './Navbar';
 
 export default function Hero() {
@@ -19,15 +17,13 @@ export default function Hero() {
             </p>
             <div className="button-group">
               <a
-                href="/resume.pdf"
+                href="./Tejas_Resume.pdf"
                 className="btn primary-btn"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaDownload style={{ marginRight: "8px" }} /> Resume
               </a>
-
-              <HiArrowLongRight style={{ marginLeft: "60px", fontSize: "40px" }} />
 
               <div className='contact-icon'>
                 <a
@@ -46,10 +42,10 @@ export default function Hero() {
                   rel="noopener noreferrer"
                 >
                   <FaGithub />
-                </a>
-
+                </a> 
+                
                 <a href="mailto:tejasspatell2@gmail.com"  className="btn icon-btn" aria-label="Email">
-                  <FaEnvelope size={40} />
+                  <FaEnvelope />
                 </a>
               </div>
             </div>
