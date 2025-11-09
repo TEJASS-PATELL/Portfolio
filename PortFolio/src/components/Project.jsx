@@ -36,7 +36,7 @@ const Project = () => {
 
           <ul className="project-links">
             <li>
-              <a href="https://github.com/yourusername/InstaConnect" target="_blank" rel="noopener noreferrer" className="link-button">
+              <a href="https://github.com/TEJASS-PATELL/All_in_one_study_hub.git" target="_blank" rel="noopener noreferrer" className="link-button">
                 <FaGithub style={{ marginRight: "8px" }} /> GitHub
               </a>
             </li>
@@ -75,12 +75,12 @@ const Project = () => {
 
           <ul className="project-links">
             <li>
-              <a href="https://github.com/yourusername/ChatLock" target="_blank" rel="noopener noreferrer" className="link-button">
+              <a href="https://github.com/TEJASS-PATELL/Full_Stack_Chat_application.git" target="_blank" rel="noopener noreferrer" className="link-button">
                 <FaGithub style={{ marginRight: "8px" }} /> GitHub
               </a>
             </li>
             <li>
-              <a href="https://chatlock.vercel.app" target="_blank" rel="noopener noreferrer" className="link-button">
+              <a href="https://full-stack-chat-application-seven.vercel.app" target="_blank" rel="noopener noreferrer" className="link-button">
                 <FaExternalLinkAlt style={{ marginRight: "8px" }} /> Live Demo
               </a>
             </li>
