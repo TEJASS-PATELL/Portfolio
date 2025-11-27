@@ -16,7 +16,7 @@ export default function Hero() {
             </p>
             <div className="button-group">
               <a
-                href="./Tejas_Resume.pdf"
+                href="./Tejas-Patel.pdf"
                 className="btn primary-btn"
                 target="_blank"
                 rel="noopener noreferrer"
