@@ -4,7 +4,6 @@ import { FaDownload, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import Navbar from './Navbar';
 
 export default function Hero() {
-
   return (
     <div className="main-container">
       <div className="main-page">
@@ -32,7 +31,7 @@ export default function Hero() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FaLinkedin />
+                  <FaLinkedin className='icon'/>
                 </a>
 
                 <a
@@ -41,11 +40,11 @@ export default function Hero() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FaGithub />
+                  <FaGithub className='icon'/>
                 </a> 
                 
                 <a href="mailto:tejasspatell2@gmail.com"  className="btn icon-btn" aria-label="Email">
-                  <FaEnvelope />
+                  <FaEnvelope className='icon'/>
                 </a>
               </div>
             </div>

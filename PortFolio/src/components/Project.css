@@ -54,7 +54,7 @@
 }
 
 .project-desc {
-  max-width: 1450px;
+  max-width: 1600px;
   font-size: 1.25rem;
   line-height: 1.8;
   margin-bottom: 2.5rem;
@@ -62,7 +62,7 @@
 }
 
 .project-meta {
-  max-width: 1350px;
+  max-width: 1500px;
   margin-bottom: 2rem;
 }
 
@@ -77,7 +77,12 @@
 }
 
 .project-meta ul li strong{
-  font-weight: bold;
+  font-weight: 900;
+}
+
+.project-meta ul .features{
+  color: rgb(0, 106, 255);
+  font-weight: bolder;
 }
 
 .project-meta ul {
