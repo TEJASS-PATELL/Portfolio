@@ -50,6 +50,48 @@
   display: inline-block;
 }
 
+.main-section-badge {
+    color: var(--text-muted);
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.main-section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.main-section-badge::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #44ff00; 
+  border-radius: 50%;
+  display: inline-block;
+  animation: blink 1.5s infinite ease-in-out;
+}
+
+@keyframes blink {
+  0% {
+    transform: scale(0.8);
+    box-shadow: 0 0 0 0 rgba(11, 199, 80, 0.7);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+  }
+  100% {
+    transform: scale(0.8);
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+
 .hero-title {
   font-size: clamp(3rem, 8vw, 5.5rem);
   font-weight: 800;
@@ -169,18 +211,6 @@
   border: 2px solid var(--text-muted);
   border-radius: 20px;
   position: relative;
-}
-
-.wheel {
-  width: 4px;
-  height: 8px;
-  background: var(--accent-white);
-  position: absolute;
-  top: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 2px;
-  animation: scroll-wheel 1.5s infinite;
 }
 
 .scroll-text {

@@ -1,138 +1,157 @@
-.timeline-container {
-  background-color: #ffffff;
-  color: #000000;
-  padding: 60px 20px;
+.achievements-section {
+    padding: 120px 20px;
+    background-color: var(--bg-dark);
 }
 
-.timeline-heading {
-  text-align: center;
-  font-size: 8rem;
-  margin-top: 100px;
-  font-weight: bold;
-  letter-spacing: 10px;
-  font-family: "Irish Grover", system-ui;
+.achievements-container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.timeline-subheading {
-  text-align: center;
-  font-size: 2rem;
-  color: #000000;
-  margin-bottom: 80px;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
+.section-header {
+    margin-bottom: 80px;
 }
 
-
-.timeline {
-  position: relative;
-  max-width: 1400px;
-  margin: auto;
-  padding: 80px 0;
+.section-title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
 }
 
-.timeline::after {
-  content: '';
-  position: absolute;
-  width: 4px;
-  background-color: #000000;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -5px;
+.section-subtitles {
+    color: #a1a1aa;
+    max-width: 600px;
+    line-height: 1.6;
+    font-size: 1rem;
 }
 
-.timeline-item {
-  padding: 20px 40px;
-  position: relative;
-  width: 50%;
+.timeline-wrapper {
+    position: relative;
+    padding-left: 80px; /* Space for the line and markers */
 }
 
-.timeline-item::after {
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  right: -13px;
-  background-color: #fff;
-  border: 4px solid #000;
-  top: 15px;
-  border-radius: 50%;
-  z-index: 1;
+/* The Vertical Line */
+.center-line {
+    position: absolute;
+    left: 25px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--border-light);
 }
 
-.timeline-item.left {
-  left: 0;
+.timeline-block {
+    position: relative;
+    margin-bottom: 80px;
 }
 
-.timeline-item.right {
-  left: 50%;
+.timeline-block:last-child {
+    margin-bottom: 0;
 }
 
-.timeline-item.right::after {
-  left: -20px;
+/* The Marker/Icon */
+.marker-container {
+    position: absolute;
+    left: -80px;
+    top: 0;
+    z-index: 10;
 }
 
-.timeline-content {
-  background: black;
-  padding: 20px;
-  border-radius: 12px;
-  color: white;
-  border: 1px solid #fff;
-  position: relative;
-  transition: transform 0.3s ease;
+.marker {
+    width: 50px;
+    height: 50px;
+    background: var(--bg-dark);
+    border: 1px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--text-main);
+    transition: all 0.4s ease;
 }
 
-.timeline-content:hover {
-  transform: scale(1.03);
+.timeline-block:hover .marker {
+    background: var(--accent-white);
+    color: var(--bg-dark);
+    border-color: var(--accent-white);
 }
 
-.timeline-img {
-  width: 100%;
-  max-width: 200px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  border: 1px solid #fff;
-  filter: grayscale(100%);
+/* Content Box */
+.timeline-content-box {
+    background: transparent;
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: 30px;
+    transition: all 0.3s ease;
 }
 
-.timeline-date {
-  font-style: italic;
-  color: #aaa;
-  margin: 5px 0 15px;
+.milestone-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
-@media screen and (max-width: 768px) {
-  .timeline::after {
-    left: 20px;
-  }
-
-  .timeline-item {
-    width: 100%;
-    padding-left: 60px;
-    padding-right: 25px;
-  }
-
-  .timeline-item.right {
-    left: 0%;
-  }
-
-  .timeline-item::after {
-    left: 15px;
-  }
+.milestone-date {
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: var(--text-muted);
 }
 
-.timeline-content a {
-  display: flex;
-  align-items: center;
-  margin-top: 8px;
-  color: #aaa;
-  font-weight: 500;
-  text-decoration: none;
-  transition: color 0.3s ease, transform 0.2s ease;
+.milestone-index {
+    font-size: 0.7rem;
+    color: #333;
+    font-weight: 900;
 }
 
-.timeline-content a:hover {
-  color: #ffffff;
-  text-decoration: underline;
+.milestone-title {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.milestone-desc {
+    color: var(--text-muted);
+    font-size: 1rem;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.milestone-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--text-main);
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.milestone-link:hover {
+    letter-spacing: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .timeline-wrapper {
+        padding-left: 60px;
+    }
+    .center-line {
+        left: 20px;
+    }
+    .marker-container {
+        left: -60px;
+    }
+    .marker {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
 }
