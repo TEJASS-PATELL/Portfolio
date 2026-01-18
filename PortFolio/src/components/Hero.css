@@ -128,27 +128,20 @@
   flex-wrap: wrap;
 }
 
-/* Resume Button - High Contrast Black & White */
 .resume-button {
   display: flex;
   align-items: center;
   gap: 12px;
   padding: 16px 32px;
-  background: var(--primary-color);
-  color: var(--secondary-color);
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   text-decoration: none;
-  border-radius: 4px; /* Minimalist Square corners */
+  border-radius: 4px; 
   font-weight: 700;
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-  border: 1px solid var(--primary-color);
+  border: none;
 }
 
-.resume-button:hover {
-  background: transparent;
-  color: var(--primary-color);
-}
-
-/* Social Strip */
 .social-strip {
   display: flex;
   gap: 1.5rem;
@@ -156,7 +149,7 @@
 
 .social-item {
   font-size: 1.3rem;
-  color: var(--text-muted);
+  color: white;
   transition: all 0.3s ease;
   background: transparent;
   width: 45px;
@@ -164,7 +157,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0%; /* Modern square look */
+  border-radius: 0%; 
   border: 1px solid var(--border-color);
 }
 
@@ -173,16 +166,14 @@
   background-color: rgb(255, 255, 255);
 }
 
-/* Background Blobs ko subtle rakha hai for depth */
 .design-blob {
   position: absolute;
   filter: blur(120px);
   z-index: 1;
   border-radius: 50%;
-  opacity: 0.15; /* Bahut kam taaki distracting na ho */
+  opacity: 0.15; 
 }
 
-/* Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
