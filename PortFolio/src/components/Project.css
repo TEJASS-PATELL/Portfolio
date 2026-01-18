@@ -52,6 +52,7 @@
 
 .project-card {
   position: relative;
+  border-radius: 20px;
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 50px 40px;
@@ -148,32 +149,22 @@
   letter-spacing: 1px;
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border-radius: 2px; /* Sharp edges for elite look */
+  border-radius: 20px; /* Sharp edges for elite look */
   cursor: pointer;
 }
 
-/* Source Button (Outline Style) */
 .btn-primary {
   background: transparent;
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.btn-primary:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: #ffffff;
-  transform: translateY(-3px);
-}
-
-/* Live Demo Button (Solid White Style) */
 .btn-secondary {
   background: #ffffff;
   color: #000000;
-  border: 1px solid #ffffff;
+  border: none;
 }
 
-
-/* Icons within buttons */
 .btn-primary svg, .btn-secondary svg {
   font-size: 0.9rem;
 }
@@ -195,5 +186,9 @@
   
   .project-card {
     padding: 40px 30px;
+  }
+
+  .project-card:hover {
+  transform: none;
   }
 }

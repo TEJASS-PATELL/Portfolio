@@ -1,9 +1,9 @@
 :root {
-  --bg-dark: #000000;
-  --text-main: #ffffff;
-  --text-muted: #a1a1aa;
-  --accent-white: #ffffff;
-  --border-light: rgba(255, 255, 255, 0.1);
+    --bg-dark: #000000;
+    --text-main: #ffffff;
+    --text-muted: #a1a1aa;
+    --accent-white: #ffffff;
+    --border-light: rgba(255, 255, 255, 0.1);
 }
 
 .contact-wrapper {
@@ -19,7 +19,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 100px;
-    align-items: flex-start; /* Clean top alignment */
+    align-items: flex-start;
+    /* Clean top alignment */
 }
 
 /* Left Side - Info */
@@ -74,7 +75,7 @@
     height: 50px;
     background: transparent;
     border: 1px solid var(--border-light);
-    border-radius: 4px; /* Consistent sharp corners */
+    border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -102,12 +103,12 @@
     font-weight: 500;
 }
 
-/* Form Styles - Ultra Minimal */
 .contact-form-container {
     background: transparent;
     border: 1px solid var(--border-light);
     padding: 50px;
-    border-radius: 4px; /* Consistent sharp corners */
+    border-radius: 4px;
+    /* Consistent sharp corners */
     transition: border-color 0.4s ease;
 }
 
@@ -135,7 +136,7 @@
     letter-spacing: 1px;
 }
 
-.modern-form input, 
+.modern-form input,
 .modern-form textarea {
     background: transparent;
     border: none;
@@ -147,7 +148,7 @@
     transition: all 0.3s ease;
 }
 
-.modern-form input:focus, 
+.modern-form input:focus,
 .modern-form textarea:focus {
     outline: none;
     border-color: var(--accent-white);
@@ -182,17 +183,26 @@
     font-size: 0.9rem;
 }
 
+
+
 /* Responsive */
 @media (max-width: 900px) {
     .contact-inner {
         grid-template-columns: 1fr;
         gap: 60px;
     }
+
     .contact-info {
         text-align: center;
         align-items: center;
     }
+
     .contact-form-container {
         padding: 30px;
+    }
+
+    .method-details {
+        align-items: start;
+        text-align: start;
     }
 }

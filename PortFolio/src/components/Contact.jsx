@@ -73,7 +73,6 @@ export default function Contact() {
                     </div>
                 </div>
 
-                {/* Right Side: Form */}
                 <div className="contact-form-container">
                     <form className="modern-form" onSubmit={handleSubmit}>
                         <div className="form-group">
