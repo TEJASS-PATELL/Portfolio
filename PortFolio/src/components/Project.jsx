@@ -3,7 +3,7 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
   {
-    title: "All-in-One Study Hub",
+    title: "FuturePath-Finder",
     description: "A unified learning and career guidance platform designed to help students explore exams and job opportunities in one streamlined dashboard.",
     tech: ["React.js", "Node.js", "MySQL", "Prisma", "JWT", "Express", "Redis", "CSS", "NodeMailer"],
     problem: "Fragmented information across multiple student portals.",
