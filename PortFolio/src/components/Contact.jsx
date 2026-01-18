@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Contact.css';
 import toast from 'react-hot-toast';
+import { FaPaperPlane, FaEnvelope, FaMapMarkerAlt, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -15,17 +16,17 @@ export default function Contact() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+        const loadingToast = toast.loading("Sending message...");
         try {
             const response = await fetch("http://localhost:5002/send", {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
+                headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData)
             });
 
             const result = await response.json();
+            toast.dismiss(loadingToast);
+
             if (result.success) {
                 toast.success("Message Sent Successfully");
                 setFormData({ name: '', email: '', message: '' });
@@ -33,52 +34,87 @@ export default function Contact() {
                 toast.error("Failed to send message.");
             }
         } catch (error) {
+            toast.dismiss(loadingToast);
             console.error("Error:", error);
-            toast.error(err);
+            toast.error("Something went wrong!");
         }
     };
 
     return (
-        <div id='contact' className="contact-section">
-            <div className="contact-container">
-                <h2>Contact Me</h2>
-                <p>
-                    I’m passionate about solving <span>Real-world problems</span> through clean, efficient, and user-centric design.
-                    With a strong focus on delivering practical solutions. If you're interested in working together, collaborating, or
-                    <span> hiring someone who’s genuinely driven</span> — feel free to reach out. I’d love to hear from you!
-                </p>
+        <section id='contact' className="contact-wrapper">
+            <div className="contact-inner">
+                <div className="contact-info">
+                    <span className="contact-badge">Contact</span>
+                    <h2 className="contact-title">
+                        Let’s start a <br />
+                        <span className="outline-text">Conversation.</span>
+                    </h2>
+                    
+                    <p className="contact-text">
+                        I am currently open to <strong>Full-time opportunities</strong> and freelance projects. 
+                        If you have a question or just want to say hi, my inbox is always open.
+                    </p>
+                    
+                    <div className="contact-methods">
+                        <div className="method-item">
+                            <div className="method-icon"><FaEnvelope /></div>
+                            <div className="method-details">
+                                <h4>Email</h4>
+                                <p>tejasspatell2@gmail.com</p>
+                            </div>
+                        </div>
+                        <div className="method-item">
+                            <div className="method-icon"><FaMapMarkerAlt /></div>
+                            <div className="method-details">
+                                <h4>Location</h4>
+                                <p>Lucknow, India </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                <form className="contact-form" onSubmit={handleSubmit}>
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder="Your Name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                    />
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="Your Email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                    />
-                    <textarea
-                        name="message"
-                        placeholder="Your Message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        style={{ width: '100%', height: '150px', resize: 'none' }}
-                        required
-                    />
+                {/* Right Side: Form */}
+                <div className="contact-form-container">
+                    <form className="modern-form" onSubmit={handleSubmit}>
+                        <div className="form-group">
+                            <label>Name -</label>
+                            <input
+                                type="text"
+                                name="name"
+                                placeholder="Your full name"
+                                value={formData.name}
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label>Email -</label>
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="yourname@email.com"
+                                value={formData.email}
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label>Message -</label>
+                            <textarea
+                                name="message"
+                                placeholder="Tell me about your project"
+                                value={formData.message}
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
 
-                    <button className="submit-btn" type="submit">
-                        <span className="text-slide">Submit</span>
-                    </button>
-                </form>
+                        <button className="premium-submit-btn" type="submit">
+                            Send Request <FaPaperPlane className="send-icon" />
+                        </button>
+                    </form>
+                </div>
             </div>
-        </div>
+        </section>
     );
 }
