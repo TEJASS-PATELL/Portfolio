@@ -1,87 +1,303 @@
-.main-container {
-  height: 100vh;
-  background-color: white;
+:root {
+  --primary-color: #ffffff; /* Pure White */
+  --secondary-color: #000000; /* Pure Black */
+  --accent-color: #3b82f6; /* Subtle Blue for links/actions (Optional) */
+  --bg-dark: #000000;
+  --text-main: #ffffff;
+  --text-muted: #a1a1aa;
+  --glass: rgba(255, 255, 255, 0.05);
+  --border-color: rgba(255, 255, 255, 0.1);
 }
 
-.architect-hero {
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  overflow: hidden;
   display: flex;
-  flex-direction: column;  
-  align-items: center;      
-  justify-content: center;   
-  min-height: 90vh;        
-  text-align: center;                   
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.main-title {
-  font-size: 180px;
-  font-weight: 600;
-  letter-spacing: 4px;
-  font-family: "Irish Grover", system-ui;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  line-height: 1;
-  margin-bottom: 25px;
-}
-
-.subtitle {
-  letter-spacing: 2px;
-  font-size: 1.5rem;
-  color: #818181;
-  margin-bottom: 4rem;
-}
-
-.left-div {
-  display: flex;
-  align-items: center;
   flex-direction: column;
 }
 
-.button-group {
+.hero-overlay {
+  z-index: 10;
+  flex: 1;
   display: flex;
-  background-color: #000000;
-  padding: 12px 20px;
-  border-radius: 24px;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
+  flex-direction: column;
 }
 
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;              
-  text-decoration: none;
-  background-color: white;
-  font-size: 1.25rem;
+.hero-container {
+  max-width: 1200px;
+  margin: auto;
+  width: 100%;
+}
+
+.hero-content {
+  max-width: 750px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.welcome-badge {
+  background: transparent;
+  padding: 6px 14px;
+  border-radius: 4px; /* Sharp professional edges */
+  font-size: 0.75rem;
   font-weight: 600;
-  padding: 8px 18px;
-  border: 2px solid #fff;
-  border-radius: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  display: inline-block;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 800;
+  margin: 1.5rem 0;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+/* Gradient remove kar diya, ab ye simple white rahega */
+.name-gradient {
+  background: none;
+  -webkit-text-fill-color: initial;
+  color: var(--primary-color);
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+.highlight-text {
+  color: var(--text-main);
+  border-bottom: 1.5px solid var(--text-main);
+  padding-bottom: 2px;
+}
+
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+/* Resume Button - High Contrast Black & White */
+.resume-button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 32px;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  text-decoration: none;
+  border-radius: 4px; /* Minimalist Square corners */
+  font-weight: 700;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border: 1px solid var(--primary-color);
+}
+
+.resume-button:hover {
+  background: transparent;
+  color: var(--primary-color);
+}
+
+/* Social Strip */
+.social-strip {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-item {
+  font-size: 1.3rem;
+  color: var(--text-muted);
   transition: all 0.3s ease;
+  background: transparent;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0%; /* Modern square look */
+  border: 1px solid var(--border-color);
 }
 
-.primary-btn {
-  background-color: #ffffff;
-  color: #000000;
+.social-item:hover {
+  color: black;
+  background-color: rgb(255, 255, 255);
 }
 
-.icon-btn{
-  font-size: 35px;
-  margin-left: 20px;
+/* Background Blobs ko subtle rakha hai for depth */
+.design-blob {
+  position: absolute;
+  filter: blur(120px);
+  z-index: 1;
+  border-radius: 50%;
+  opacity: 0.15; /* Bahut kam taaki distracting na ho */
 }
 
-.icon-btn .icon {
-  transition: transform 0.2s ease;
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.icon-btn .icon:hover {
-  transform: scale(1.1);
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
-.contact-icon{
-  margin-left: 50px;
-  font-weight: 900;
+.mouse {
+  width: 25px;
+  height: 40px;
+  border: 2px solid var(--text-muted);
+  border-radius: 20px;
+  position: relative;
+}
+
+.wheel {
+  width: 4px;
+  height: 8px;
+  background: var(--accent-white);
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  animation: scroll-wheel 1.5s infinite;
+}
+
+.scroll-text {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+}
+
+@keyframes scroll-wheel {
+  0% { opacity: 1; top: 8px; }
+  100% { opacity: 0; top: 20px; }
+}
+
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero-container {
+    padding: 0 1.5rem;
+    text-align: center;
+  }
+  .hero-cta-group {
+    justify-content: center;
+  }
+  .hero-title {
+    font-size: 3.2rem;
+    letter-spacing: -1px;
+  }
+}
+
+/* 2. Tablets & Small Laptops (Max 1024px) */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: clamp(3rem, 10vw, 4.5rem); /* Scalable font */
+    letter-spacing: -1.5px;
+  }
+  
+  .hero-content {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 100px 20px 60px; /* Extra top padding for mobile navbar */
+    text-align: center; /* Center text on mobile */
+  }
+
+  .hero-content {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items for mobile */
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin: 1rem 0;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    padding: 0 10px;
+  }
+
+  .hero-cta-group {
+    flex-direction: column; /* Stack button and socials */
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .resume-button {
+    width: 100%; /* Full width button on mobile */
+    max-width: 300px;
+    justify-content: center;
+  }
+
+  .social-strip {
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* Hide scroll indicator on very small screens to save space */
+  .scroll-indicator {
+    display: none; 
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.8rem; /* Smaller title for tight screens */
+  }
+
+  .welcome-badge {
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+  
+  .social-item {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero-section {
+    padding: 120px 20px;
+    min-height: auto; /* Allow scrolling if screen is too short */
+  }
+  .scroll-indicator {
+    display: none;
+  }
 }
