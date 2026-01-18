@@ -47,7 +47,7 @@ export default function Contact() {
                     <span className="contact-badge">Contact</span>
                     <h2 className="contact-title">
                         Let’s start a <br />
-                        <span className="outline-text">Conversation.</span>
+                        <span className="outline-text">Conversation</span>
                     </h2>
                     
                     <p className="contact-text">
